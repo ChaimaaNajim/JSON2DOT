@@ -1,0 +1,143 @@
+digraph "JSON Model in DOT" {
+graph[rankdir=TB,labeljust=l,labelloc=t,];
+ node[shape=ellipse];
+node1[label="Object", fillcolor= lightblue, style=filled]
+ node1->node7[]
+ node1->node18[]
+;
+ node[shape=ellipse];
+node2[label="Object", fillcolor= lightblue, style=filled]
+ node2->node8[]
+ node2->node9[]
+ node2->node10[]
+ node2->node11[]
+ node2->node12[]
+ node2->node17[]
+;
+ node[shape=ellipse];
+node22[label="Chaimaa"]
+;
+ node[shape=ellipse];
+node23[label="Najim"]
+;
+ node[shape=ellipse];
+node24[label="chaimaa.Najim@gmail.com"]
+;
+ node[shape=ellipse];
+node25[label="true"]
+;
+ node[shape=ellipse];
+node3[label="Object", fillcolor= lightblue, style=filled]
+ node3->node13[]
+ node3->node14[]
+ node3->node15[]
+ node3->node16[]
+;
+ node[shape=ellipse];
+node26[label="Marrakech"]
+;
+ node[shape=ellipse];
+node27[label="Mororcco"]
+;
+ node[shape=ellipse];
+node28[label="432, rue El MAssira"]
+;
+ node[shape=ellipse];
+node29[label="40000.0"]
+;
+ node[shape=ellipse];
+node30[label="987.0"]
+;
+ node[shape=ellipse];
+node34[label="Array", fillcolor= yellow, style=filled]
+ node34->node4[]
+ node34->node5[]
+ node34->node6[]
+;
+ node[shape=ellipse];
+node4[label="Object", fillcolor= lightblue, style=filled]
+ node4->node19[]
+;
+ node[shape=ellipse];
+node31[label="Firts Post"]
+;
+ node[shape=ellipse];
+node5[label="Object", fillcolor= lightblue, style=filled]
+ node5->node20[]
+;
+ node[shape=ellipse];
+node32[label="Second Post"]
+;
+ node[shape=ellipse];
+node6[label="Object", fillcolor= lightblue, style=filled]
+ node6->node21[]
+;
+ node[shape=ellipse];
+node33[label="Third Post"]
+;
+ node[shape=ellipse];
+node7[label="user"]
+ node7->node2[]
+;
+ node[shape=ellipse];
+node8[label="firstname"]
+ node8->node22[]
+;
+ node[shape=ellipse];
+node9[label="lastname"]
+ node9->node23[]
+;
+ node[shape=ellipse];
+node10[label="email"]
+ node10->node24[]
+;
+ node[shape=ellipse];
+node11[label="isVerified"]
+ node11->node25[]
+;
+ node[shape=ellipse];
+node12[label="Adress"]
+ node12->node3[]
+;
+ node[shape=ellipse];
+node13[label="City"]
+ node13->node26[]
+;
+ node[shape=ellipse];
+node14[label="Country"]
+ node14->node27[]
+;
+ node[shape=ellipse];
+node15[label="addresse"]
+ node15->node28[]
+;
+ node[shape=ellipse];
+node16[label="ZIP"]
+ node16->node29[]
+;
+ node[shape=ellipse];
+node17[label="Friends count"]
+ node17->node30[]
+;
+ node[shape=ellipse];
+node18[label="posts"]
+ node18->node34[]
+;
+ node[shape=ellipse];
+node19[label="title"]
+ node19->node31[]
+;
+ node[shape=ellipse];
+node20[label="title"]
+ node20->node32[]
+;
+ node[shape=ellipse];
+node21[label="title"]
+ node21->node33[]
+;
+ node[shape=ellipse];
+Root[fillcolor= black, style=filled,fontcolor = white]
+ Root->node1[]
+;
+
+}

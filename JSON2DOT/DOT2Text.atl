@@ -1,0 +1,114 @@
+query DOT2Text = DOT!Graph.allInstances() -> asSequence() -> first().toString2().
+		writeTo('./JSON2DOT/results.dot');
+helper context DOT!Graph def: toString2(): String =
+	let subs: Sequence(DOT!SubGraph) =
+		self.nodes -> select(e | e.oclIsKindOf(DOT!SubGraph))
+	in
+		let nod: Sequence(DOT!Node) =
+			self.nodes -> select(e | e.oclIsKindOf(DOT!Node))
+		in
+			--type is graph or digraph /1st line
+			self.type + ' ' + '\"' + self.name + '\"' + ' ' + '{\r\n' + --start graph
+				'graph[' + --rankdir
+				if self.rankDir.oclIsUndefined() then
+				''
+			else
+				'rankdir=' + self.rankDir + ','
+			endif + --labeljust
+				if self.labeljust.oclIsUndefined() then
+				''
+			else
+				'labeljust=' + self.labeljust + ','
+			endif + --labelloc
+				if self.labelloc.oclIsUndefined() then
+				''
+			else
+				'labelloc=' + self.labelloc + ','
+			endif + '];\r\n' + --end graph
+				subs -> iterate(e; acc: String = '' | acc + ' ' + e.toString2()) + if nod
+						-> size() > 0 then
+				nod -> iterate(e; acc: String = '' | acc + ' ' + e.toString2())
+			else
+				''
+			endif + '\r\n}';
+
+helper context DOT!SubGraph def: toString2(): String =
+	let subs: Sequence(DOT!SubGraph) =
+		self.nodes -> select(e | e.oclIsKindOf(DOT!SubGraph))
+	in
+		let nod: Sequence(DOT!Node) =
+			self.nodes -> select(e | e.oclIsKindOf(DOT!Node))
+		in
+			'subgraph ' + '\"' + self.name + '\"' + '{\r\n' + if self.labelloc.
+					oclIsUndefined() then
+				''
+			else
+				'labelloc=' + self.labelloc + '\r\n'
+			endif + if self.color.oclIsUndefined() then
+				''
+			else
+				'color=' + self.color + '\r\n'
+			endif + if self.label.oclIsUndefined() then
+				''
+			else
+				'label=' + self.label.content  + '\r\n'
+			endif + if nod -> size() > 0 then
+				nod -> iterate(e; acc: String = '' | acc + ' ' + e.toString2())
+			else
+				''
+			endif + if subs -> size() > 0 then
+				subs -> iterate(e; acc: String = '' | acc + ' ' + e.toString2())
+			else
+				''
+			endif + '\r\n}';
+
+helper context DOT!Node def: toString2(): String =
+	'node' + if self.shape.name.oclIsUndefined() then
+		'[shape= circle];\r\n'
+	else
+		'[shape=' + self.shape.name + '];\r\n'
+	endif + self.name 
+	+ if self.name = 'Root' then
+	'[fillcolor= black, style=filled,fontcolor = white]'
+	else ''
+	endif 
+	+ if self.label.oclIsUndefined() then
+			''
+		else
+			'[label="' + self.label.content + '"'
+			  +
+			   
+		
+		if self.label.content ='Object' then
+		
+		     ', fillcolor= lightblue, style=filled]'
+		else	 
+			
+		
+		if self.label.content ='Array' then
+		
+		     ', fillcolor= yellow, style=filled]'
+		else	
+			
+			']'
+		
+		endif
+		endif
+		endif 
+		
+		+ '\r\n' +
+		
+		if self.refers->size() > 0 then
+			self.refers->iterate(e; acc : String = '' |
+				acc + ' ' + e.toString2()
+			)
+		else
+			''
+		endif +
+		';\r\n';
+
+helper context DOT!Arc def: toString2(): String =
+	self.fromNode.name + '->' + self.toNode.name + '[' + ']\r\n';
+
+helper context DOT!SimpleLabel def: toString2(): String =
+	'\"' + self.content + '\"';

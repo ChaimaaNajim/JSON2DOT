@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DOT="http://ensias.ma">
+  <DOT:Arc toNode="/1/@nodes.0" fromNode="/1/@nodes.34"/>
+  <DOT:Graph name="JSON Model in DOT" type="digraph" rankDir="TB" labelloc="t" labeljust="l">
+    <nodes xsi:type="DOT:Node" name="node1" refers="/2 /3" referredBy="/0">
+      <label xsi:type="DOT:SimpleLabel" content="Object"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node2" refers="/4 /5 /6 /7 /8 /9" referredBy="/17">
+      <label xsi:type="DOT:SimpleLabel" content="Object"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node22" referredBy="/18">
+      <label xsi:type="DOT:SimpleLabel" content="Chaimaa"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node23" referredBy="/19">
+      <label xsi:type="DOT:SimpleLabel" content="Najim"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node24" referredBy="/20">
+      <label xsi:type="DOT:SimpleLabel" content="chaimaa.Najim@gmail.com"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node25" referredBy="/21">
+      <label xsi:type="DOT:SimpleLabel" content="true"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node3" refers="/10 /11 /12 /13" referredBy="/22">
+      <label xsi:type="DOT:SimpleLabel" content="Object"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node26" referredBy="/23">
+      <label xsi:type="DOT:SimpleLabel" content="Marrakech"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node27" referredBy="/24">
+      <label xsi:type="DOT:SimpleLabel" content="Mororcco"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node28" referredBy="/25">
+      <label xsi:type="DOT:SimpleLabel" content="432, rue El MAssira"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node29" referredBy="/26">
+      <label xsi:type="DOT:SimpleLabel" content="40000.0"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node30" referredBy="/27">
+      <label xsi:type="DOT:SimpleLabel" content="987.0"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node34" refers="/32 /33 /34" referredBy="/28">
+      <label xsi:type="DOT:SimpleLabel" content="Array"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node4" refers="/14" referredBy="/32">
+      <label xsi:type="DOT:SimpleLabel" content="Object"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node31" referredBy="/29">
+      <label xsi:type="DOT:SimpleLabel" content="Firts Post"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node5" refers="/15" referredBy="/33">
+      <label xsi:type="DOT:SimpleLabel" content="Object"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node32" referredBy="/30">
+      <label xsi:type="DOT:SimpleLabel" content="Second Post"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node6" refers="/16" referredBy="/34">
+      <label xsi:type="DOT:SimpleLabel" content="Object"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node33" referredBy="/31">
+      <label xsi:type="DOT:SimpleLabel" content="Third Post"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node7" refers="/17" referredBy="/2">
+      <label xsi:type="DOT:SimpleLabel" content="user"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node8" refers="/18" referredBy="/4">
+      <label xsi:type="DOT:SimpleLabel" content="firstname"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node9" refers="/19" referredBy="/5">
+      <label xsi:type="DOT:SimpleLabel" content="lastname"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node10" refers="/20" referredBy="/6">
+      <label xsi:type="DOT:SimpleLabel" content="email"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node11" refers="/21" referredBy="/7">
+      <label xsi:type="DOT:SimpleLabel" content="isVerified"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node12" refers="/22" referredBy="/8">
+      <label xsi:type="DOT:SimpleLabel" content="Adress"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node13" refers="/23" referredBy="/10">
+      <label xsi:type="DOT:SimpleLabel" content="City"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node14" refers="/24" referredBy="/11">
+      <label xsi:type="DOT:SimpleLabel" content="Country"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node15" refers="/25" referredBy="/12">
+      <label xsi:type="DOT:SimpleLabel" content="addresse"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node16" refers="/26" referredBy="/13">
+      <label xsi:type="DOT:SimpleLabel" content="ZIP"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node17" refers="/27" referredBy="/9">
+      <label xsi:type="DOT:SimpleLabel" content="Friends count"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node18" refers="/28" referredBy="/3">
+      <label xsi:type="DOT:SimpleLabel" content="posts"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node19" refers="/29" referredBy="/14">
+      <label xsi:type="DOT:SimpleLabel" content="title"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node20" refers="/30" referredBy="/15">
+      <label xsi:type="DOT:SimpleLabel" content="title"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="node21" refers="/31" referredBy="/16">
+      <label xsi:type="DOT:SimpleLabel" content="title"/>
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="Root" refers="/0">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+  </DOT:Graph>
+  <DOT:Arc toNode="/1/@nodes.19" fromNode="/1/@nodes.0"/>
+  <DOT:Arc toNode="/1/@nodes.30" fromNode="/1/@nodes.0"/>
+  <DOT:Arc toNode="/1/@nodes.20" fromNode="/1/@nodes.1"/>
+  <DOT:Arc toNode="/1/@nodes.21" fromNode="/1/@nodes.1"/>
+  <DOT:Arc toNode="/1/@nodes.22" fromNode="/1/@nodes.1"/>
+  <DOT:Arc toNode="/1/@nodes.23" fromNode="/1/@nodes.1"/>
+  <DOT:Arc toNode="/1/@nodes.24" fromNode="/1/@nodes.1"/>
+  <DOT:Arc toNode="/1/@nodes.29" fromNode="/1/@nodes.1"/>
+  <DOT:Arc toNode="/1/@nodes.25" fromNode="/1/@nodes.6"/>
+  <DOT:Arc toNode="/1/@nodes.26" fromNode="/1/@nodes.6"/>
+  <DOT:Arc toNode="/1/@nodes.27" fromNode="/1/@nodes.6"/>
+  <DOT:Arc toNode="/1/@nodes.28" fromNode="/1/@nodes.6"/>
+  <DOT:Arc toNode="/1/@nodes.31" fromNode="/1/@nodes.13"/>
+  <DOT:Arc toNode="/1/@nodes.32" fromNode="/1/@nodes.15"/>
+  <DOT:Arc toNode="/1/@nodes.33" fromNode="/1/@nodes.17"/>
+  <DOT:Arc toNode="/1/@nodes.1" fromNode="/1/@nodes.19"/>
+  <DOT:Arc toNode="/1/@nodes.2" fromNode="/1/@nodes.20"/>
+  <DOT:Arc toNode="/1/@nodes.3" fromNode="/1/@nodes.21"/>
+  <DOT:Arc toNode="/1/@nodes.4" fromNode="/1/@nodes.22"/>
+  <DOT:Arc toNode="/1/@nodes.5" fromNode="/1/@nodes.23"/>
+  <DOT:Arc toNode="/1/@nodes.6" fromNode="/1/@nodes.24"/>
+  <DOT:Arc toNode="/1/@nodes.7" fromNode="/1/@nodes.25"/>
+  <DOT:Arc toNode="/1/@nodes.8" fromNode="/1/@nodes.26"/>
+  <DOT:Arc toNode="/1/@nodes.9" fromNode="/1/@nodes.27"/>
+  <DOT:Arc toNode="/1/@nodes.10" fromNode="/1/@nodes.28"/>
+  <DOT:Arc toNode="/1/@nodes.11" fromNode="/1/@nodes.29"/>
+  <DOT:Arc toNode="/1/@nodes.12" fromNode="/1/@nodes.30"/>
+  <DOT:Arc toNode="/1/@nodes.14" fromNode="/1/@nodes.31"/>
+  <DOT:Arc toNode="/1/@nodes.16" fromNode="/1/@nodes.32"/>
+  <DOT:Arc toNode="/1/@nodes.18" fromNode="/1/@nodes.33"/>
+  <DOT:Arc toNode="/1/@nodes.13" fromNode="/1/@nodes.12"/>
+  <DOT:Arc toNode="/1/@nodes.15" fromNode="/1/@nodes.12"/>
+  <DOT:Arc toNode="/1/@nodes.17" fromNode="/1/@nodes.12"/>
+</xmi:XMI>

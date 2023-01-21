@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="DOT" nsURI="http://ensias.ma" nsPrefix="DOT">
+  <eClassifiers xsi:type="ecore:EClass" name="GraphRoot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//GraphElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GraphElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//Label"
+        containment="true" eOpposite="#//Label/element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Graph" eSuperTypes="#//GraphElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
+        eType="#//NodeLike" containment="true" eOpposite="#//NodeLike/graph"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rankDir" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="labelloc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="labeljust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Label">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+        eType="#//GraphElement" eOpposite="#//GraphElement/label"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeLike" eSuperTypes="#//GraphElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refers" upperBound="-1"
+        eType="#//Arc" eOpposite="#//Arc/fromNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referredBy" upperBound="-1"
+        eType="#//Arc" eOpposite="#//Arc/toNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" eType="#//SubGraph"
+        eOpposite="#//SubGraph/nodes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="graph" eType="#//Graph"
+        eOpposite="#//Graph/nodes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//NodeLike">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shape" eType="#//NodeShape"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Arc" eSuperTypes="#//GraphElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toNode" lowerBound="1"
+        eType="#//NodeLike" eOpposite="#//NodeLike/referredBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromNode" lowerBound="1"
+        eType="#//NodeLike" eOpposite="#//NodeLike/refers"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubGraph" eSuperTypes="#//NodeLike">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
+        eType="#//NodeLike" containment="true" eOpposite="#//NodeLike/owner"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeShape" eSuperTypes="#//Shape"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArrowShape" eSuperTypes="#//Shape">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clipping" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPlane" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shape" eSuperTypes="#//GraphElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="peripheries" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleNodeShape" eSuperTypes="#//NodeShape"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleLabel" eSuperTypes="#//Label">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

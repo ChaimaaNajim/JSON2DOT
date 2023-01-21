@@ -1,0 +1,138 @@
+module JSON2DOT;
+create OUT: DOT from IN: JSON;
+
+helper def: diff2: Integer =
+	0;
+
+-- This helper increments diff1 value
+-- CONTEXT: thisModule
+-- RETURN:  Integer
+helper def: incDiff2(): String =
+	(thisModule.refSetValue('diff2', thisModule.diff2 + 1).diff2).toString();
+
+helper def: RankingDirection(): String =
+	'TB';
+
+helper def: LabelJustification(): String =
+	'l';
+
+helper def: LabelLocation(): String =
+	't';
+
+helper context JSON!JSONProperty def: getPropertyName(): String =
+	self.name;
+
+helper def: getallElementInstances(): Sequence(JSON!JSONElement) =
+	JSON!JSONElement.allInstances();
+
+helper def: getallPropertyInstances(): Sequence(JSON!JSONProperty) =
+	JSON!JSONProperty.allInstances();
+
+rule JSON2Graph {
+	from
+		j: JSON!JSON
+	to
+		n: DOT!Node (
+			name <- 'Root',
+			shape <- NodeShape,
+			referredBy <- arcs
+		),
+		NodeShape: DOT!SimpleNodeShape (
+			name <- 'ellipse'
+		),
+		arcs: distinct DOT!Arc foreach(element in j.elements) (
+			toNode <- element,
+			fromNode <- n
+		),
+		g: DOT!Graph (
+			type <- 'digraph',
+			name <- 'JSON Model in DOT',
+			rankDir <- thisModule.RankingDirection(),
+			labeljust <- thisModule.LabelJustification(),
+			labelloc <- thisModule.LabelLocation(),
+			nodes <- thisModule.getallElementInstances() -> append(thisModule.
+					getallPropertyInstances()) -> append(n)
+		)
+}
+
+rule JSONObject2Node {
+	from
+		j: JSON!JSONObject
+	to
+		n: DOT!Node (
+			label <- Label,
+			name <- 'node' + thisModule.incDiff2().toString(),
+			shape <- NodeShape,
+			referredBy <- arcs
+		),
+		Label: DOT!SimpleLabel (
+			content <- 'Object'
+		),
+		NodeShape: DOT!SimpleNodeShape (
+			name <- 'ellipse'
+		),
+		arcs: distinct DOT!Arc foreach(prop in j.properties) (
+			toNode <- prop,
+			fromNode <- n
+		)
+}
+
+rule JSONProperty2Node {
+	from
+		p: JSON!JSONProperty
+	to
+		n: DOT!Node (
+			label <- Label,
+			name <- 'node' + thisModule.incDiff2().toString(),
+			shape <- NodeShape
+		),
+		Label: DOT!SimpleLabel (
+			content <- p.name
+		),
+		NodeShape: DOT!SimpleNodeShape (
+			name <- 'ellipse'
+		),
+		a: DOT!Arc (
+			toNode <- p.value,
+			fromNode <- p
+		)
+}
+
+rule JSONValue2Node {
+	from
+		p: JSON!JSONValue
+	to
+		n: DOT!Node (
+			label <- Label,
+			name <- 'node' + thisModule.incDiff2().toString(),
+			shape <- NodeShape
+		),
+		Label: DOT!SimpleLabel (
+			content <- p.value.toString()
+		),
+		NodeShape: DOT!SimpleNodeShape (
+			name <- 'ellipse'
+		)
+}
+
+rule JSONArray2Node {
+	from
+		a: JSON!JSONArray
+	to
+		n: DOT!Node (
+			label <- Label,
+			name <- 'node' + thisModule.incDiff2().toString(),
+			shape <- NodeShape,
+			referredBy <- arcs
+		),
+		Label: DOT!SimpleLabel (
+			content <- 'Array'
+		),
+		NodeShape: DOT!SimpleNodeShape (
+			name <- 'ellipse'
+		),
+		arcs: distinct DOT!Arc foreach(element in a.elements) (
+			toNode <- element,
+			fromNode <- n
+		)
+}

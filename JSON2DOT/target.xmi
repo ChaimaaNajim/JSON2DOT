@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DOT="http://ensias.ma">
+  <DOT:Arc toNode="/1/@nodes.0" fromNode="/1/@nodes.9"/>
+  <DOT:Graph name="JSON Model in DOT" type="digraph" rankDir="TB" labelloc="t" labeljust="l">
+    <nodes xsi:type="DOT:Node" name="Object" refers="/2 /3 /4" referredBy="/0">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="true" referredBy="/6">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="miaw" referredBy="/7">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="Object" refers="/5" referredBy="/8">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="Meriem" referredBy="/9">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="name" refers="/6" referredBy="/2">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="waaa" refers="/7" referredBy="/3">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="data" refers="/8" referredBy="/4">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="firstname" refers="/9" referredBy="/5">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+    <nodes xsi:type="DOT:Node" name="Root" refers="/0">
+      <shape xsi:type="DOT:SimpleNodeShape" name="ellipse"/>
+    </nodes>
+  </DOT:Graph>
+  <DOT:Arc toNode="/1/@nodes.5" fromNode="/1/@nodes.0"/>
+  <DOT:Arc toNode="/1/@nodes.6" fromNode="/1/@nodes.0"/>
+  <DOT:Arc toNode="/1/@nodes.7" fromNode="/1/@nodes.0"/>
+  <DOT:Arc toNode="/1/@nodes.8" fromNode="/1/@nodes.3"/>
+  <DOT:Arc toNode="/1/@nodes.1" fromNode="/1/@nodes.5"/>
+  <DOT:Arc toNode="/1/@nodes.2" fromNode="/1/@nodes.6"/>
+  <DOT:Arc toNode="/1/@nodes.3" fromNode="/1/@nodes.7"/>
+  <DOT:Arc toNode="/1/@nodes.4" fromNode="/1/@nodes.8"/>
+</xmi:XMI>
